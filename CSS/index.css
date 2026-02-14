@@ -185,11 +185,17 @@ header .navbar{
 
 @media (max-width: 768px) {
 
+    header .navbar {
+        padding: 14px 20px;
+        position: relative;
+        flex-wrap: wrap;   /* permite que el menu baje */
+    }
+
     .hamburguer {
         display: flex;
     }
 
-    .nabar .nav-menu {
+    .navbar .nav-menu {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -200,31 +206,11 @@ header .navbar{
     }
 
     .hero-section .section-content {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 100px 24px 60px;
-    }
-
-}
-
-@media (max-width: 1024px) {
-    .hero-section .section-content { padding: 100px 40px 60px; gap: 30px; }
-    .hero-section .hero-details .subtitle { font-size: 1.9rem; max-width: 90%; }
-    .hero-section .hero-details .description { max-width: 90%; }
-    .hero-section .hero-image-wrapper { max-width: 300px; margin-right: 0; }
-}
-
-@media (max-width: 768px) {
-
-    header .navbar {
-        padding: 14px 20px;
-        position: relative;
-        flex-wrap: wrap;   /* permite que el menu baje */
-    }
-
-    /* Mostrar hamburguesa */
-    .hamburger {
         display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;   /* centra verticalmente */
+    align-items: center;       /* centra horizontalmente */
+    text-align: center;        /* centra texto dentro de cada bloque */
     }
 
     /* Menú cerrado por defecto */
@@ -237,6 +223,57 @@ header .navbar{
         /* ocupa toda la fila siguiente gracias a flex-wrap */
         order: 3;
     }
+
+    .hero-section .section-content {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center; /* ✅ esto centra el bloque completo */
+  text-align: center;  /* ✅ esto centra el texto dentro */
+  padding: 100px 24px 60px;
+}
+
+.hero-section .hero-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centra todos los hijos */
+  text-align: center;   /* Centra el texto dentro */
+  max-width: 90%;       /* Evita que se pegue a los bordes */
+}
+
+
+    .hero-section .hero-details .title { 
+  font-size: 2rem; 
+  text-align: center;
+  align-items: center;
+}
+
+.hero-section .hero-details .subtitle { 
+  font-size: 1.6rem; 
+  max-width: 100%; 
+  text-align: center;
+  align-items: center;
+}
+.hero-section .hero-details .description { 
+  font-size: 1rem; 
+  max-width: 100%; 
+  text-align: center;
+  align-items: center;
+}
+
+.hero-section .hero-details .buttons { 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  align-items: center;
+}
+
+}
+
+@media (max-width: 1024px) {
+    .hero-section .section-content { padding: 100px 40px 60px; gap: 30px; }
+    .hero-section .hero-details .subtitle { font-size: 1.9rem; max-width: 90%; }
+    .hero-section .hero-details .description { max-width: 90%; }
+    .hero-section .hero-image-wrapper { max-width: 300px; margin-right: 0; }
 }
 
 /* Abrir menú cuando el checkbox está marcado */
@@ -253,38 +290,33 @@ header .navbar{
 }
 
 /* Hero */
+@media (min-width: 769px) {
 .hero-section .section-content {
-    flex-direction: column-reverse;
-    justify-content: center;
-    padding: 100px 24px 60px;
-    text-align: center;
     gap: 30px;
 }
 
+
 .hero-section .hero-details .title { 
   font-size: 2rem; 
+  text-align: left;
 }
 
 .hero-section .hero-details .subtitle { 
   font-size: 1.6rem; 
   max-width: 100%; 
+  text-align: left;
 }
-
 .hero-section .hero-details .description { 
   font-size: 1rem; 
   max-width: 100%; 
+  text-align: left;
 }
 
 .hero-section .hero-details .buttons { 
-  justify-content: center; 
+  justify-content: left; 
   flex-wrap: wrap; 
 }
-
-.hero-section .hero-image-wrapper { 
-  max-width: 280px; 
-  margin-right: 0; 
 }
-
 @media (max-width: 480px) {
   .hero-section .hero-details .title { 
     font-size: 1.7rem; 
