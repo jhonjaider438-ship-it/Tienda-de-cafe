@@ -123,13 +123,12 @@ header .navbar{
 .hero-section .hero-details .title {
     color: #e2750f;
     font-size: 2.3rem;
-    font-family: "Miniver", sans-serif;
 }
 
 .hero-section .hero-details .subtitle {
     margin-top: 8px;
     font-size: 2.3rem;
-    max-width: 70%;
+    max-width: 100%;
 }
 
 .hero-section .hero-details .description {
@@ -139,13 +138,14 @@ header .navbar{
 }
 
 .hero-section .hero-details .button {
-    padding: 10px 26px;
+    padding: 10px 20px;
     background-color: #e2750f;
     color: #3b141c;
     border-radius: 20px;
     border: 2px solid transparent;
     transition: 0.3s ease;
     font-weight: 600;
+    font-size: 1rem; /* 👈 este controla el tamaño del texto */
 }
 
 .hero-section .hero-details .buttons {
@@ -158,8 +158,11 @@ header .navbar{
 }
 
 .hero-section .hero-image-wrapper {
-    max-width: 500px;
-    margin-right: 30px;
+    max-width: 800px;   /* 🔹 imagen más grande */
+    margin-right: 130px; /* 🔹 la mueve un poco hacia la izquierda */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 🔹 la centra verticalmente */
 }
 
 .nav-link {
@@ -246,6 +249,7 @@ header .navbar{
   font-size: 2rem; 
   text-align: center;
   align-items: center;
+   font-family: "Playfair Display", sans-serif;
 }
 
 .hero-section .hero-details .subtitle { 
@@ -253,12 +257,14 @@ header .navbar{
   max-width: 100%; 
   text-align: center;
   align-items: center;
+  font-family: "Poppins", sans-serif;
 }
 .hero-section .hero-details .description { 
   font-size: 1rem; 
   max-width: 100%; 
   text-align: center;
   align-items: center;
+  font-family: "Lora", sans-serif;
 }
 
 .hero-section .hero-details .buttons { 
@@ -273,7 +279,7 @@ header .navbar{
     .hero-section .section-content { padding: 100px 40px 60px; gap: 30px; }
     .hero-section .hero-details .subtitle { font-size: 1.9rem; max-width: 90%; }
     .hero-section .hero-details .description { max-width: 90%; }
-    .hero-section .hero-image-wrapper { max-width: 300px; margin-right: 0; }
+    .hero-section .hero-image-wrapper { max-width: 800px; margin-right: 0; }
 }
 
 /* Abrir menú cuando el checkbox está marcado */
@@ -297,26 +303,31 @@ header .navbar{
 
 
 .hero-section .hero-details .title { 
-  font-size: 2rem; 
+  font-size: 3.5rem; 
   text-align: left;
+  font-family: "Playfair Display", sans-serif;
 }
 
 .hero-section .hero-details .subtitle { 
-  font-size: 1.6rem; 
+  font-size: 2.5rem; 
   max-width: 100%; 
   text-align: left;
+  font-family: "Poppins", sans-serif;
 }
 .hero-section .hero-details .description { 
-  font-size: 1rem; 
+  font-size: 1.5rem; 
   max-width: 100%; 
   text-align: left;
+  font-family: "Lora", sans-serif;
 }
 
 .hero-section .hero-details .buttons { 
   justify-content: left; 
   flex-wrap: wrap; 
 }
+
 }
+
 @media (max-width: 480px) {
   .hero-section .hero-details .title { 
     font-size: 1.7rem; 
@@ -344,7 +355,13 @@ header .navbar{
     width: 100%; 
   }
 
-  .hero-section .hero-image-wrapper { 
-    max-width: 220px; 
-  }
+}
+@media (max-width: 1200px) {
+    .hero-section .hero-image-wrapper {
+    max-width: 400px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 }
