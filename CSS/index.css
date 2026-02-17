@@ -145,7 +145,7 @@ header .navbar{
     border: 2px solid transparent;
     transition: 0.3s ease;
     font-weight: 600;
-    font-size: 1rem; /* 👈 este controla el tamaño del texto */
+    font-size: 1rem; 
 }
 
 .hero-section .hero-details .buttons {
@@ -158,11 +158,11 @@ header .navbar{
 }
 
 .hero-section .hero-image-wrapper {
-    max-width: 800px;   /* 🔹 imagen más grande */
-    margin-right: 130px; /* 🔹 la mueve un poco hacia la izquierda */
+    max-width: 800px;  
+    margin-right: 130px; 
     display: flex;
     justify-content: center;
-    align-items: center; /* 🔹 la centra verticalmente */
+    align-items: center; 
 }
 
 .nav-link {
@@ -191,7 +191,7 @@ header .navbar{
     header .navbar {
         padding: 14px 20px;
         position: relative;
-        flex-wrap: wrap;   /* permite que el menu baje */
+        flex-wrap: wrap;   
     }
 
     .hamburguer {
@@ -211,9 +211,9 @@ header .navbar{
     .hero-section .section-content {
         display: flex;
     flex-direction: column-reverse;
-    justify-content: center;   /* centra verticalmente */
-    align-items: center;       /* centra horizontalmente */
-    text-align: center;        /* centra texto dentro de cada bloque */
+    justify-content: center;   
+    align-items: center;       
+    text-align: center;        
     }
 
     /* Menú cerrado por defecto */
@@ -223,7 +223,6 @@ header .navbar{
         width: 100%;
         background-color: #3b141c;
         padding: 10px 0;
-        /* ocupa toda la fila siguiente gracias a flex-wrap */
         order: 3;
     }
 
@@ -231,17 +230,17 @@ header .navbar{
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-  align-items: center; /* ✅ esto centra el bloque completo */
-  text-align: center;  /* ✅ esto centra el texto dentro */
+  align-items: center; 
+  text-align: center;  
   padding: 100px 24px 60px;
 }
 
 .hero-section .hero-details {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Centra todos los hijos */
-  text-align: center;   /* Centra el texto dentro */
-  max-width: 90%;       /* Evita que se pegue a los bordes */
+  align-items: center; 
+  text-align: center;   
+  max-width: 90%;       
 }
 
 
